@@ -29,7 +29,7 @@ exports.output = {
 exports.plugins = [
   new HtmlWebpackPlugin({
     title: "Multi search engine",
-    meta: { viewport: "width=device-width, initial-scale=1, shrink-to-fit=no" },
+    meta: [{ "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
   }),
 ];
 exports.devServer = {

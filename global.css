@@ -1,4 +1,12 @@
-@import "./normalize.css";
+html,
+body,
+#root {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
