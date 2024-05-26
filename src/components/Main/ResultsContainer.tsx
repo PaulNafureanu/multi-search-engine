@@ -1,7 +1,5 @@
-import React from "react";
-
 const ResultsContainer = () => {
-  return <div>ResultsContainer</div>;
+  return <div className="w-full h-full">ResultsContainer</div>;
 };
 
 export default ResultsContainer;

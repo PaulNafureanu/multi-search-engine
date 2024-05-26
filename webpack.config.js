@@ -30,6 +30,7 @@ exports.plugins = [
   new HtmlWebpackPlugin({
     title: "Multi search engine",
     meta: [{ "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
+    favicon: path.resolve(__dirname, "public", "favicons", "whitefavicon.svg"),
   }),
 ];
 exports.devServer = {
