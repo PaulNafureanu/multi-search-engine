@@ -14,7 +14,7 @@ exports.module = {
     {
       test: /\.css$/,
       exclude: /node_modules/,
-      use: ["style-loader", "css-loader"],
+      use: ["style-loader", "css-loader", "postcss-loader"],
     },
   ],
 };
@@ -36,6 +36,7 @@ exports.devServer = {
   static: {
     directory: path.join(__dirname, "public"),
   },
+  hot: true,
   compress: true,
   port: 9000,
 };
