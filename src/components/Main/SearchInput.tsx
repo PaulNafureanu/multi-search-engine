@@ -2,6 +2,9 @@ import React from "react";
 import { useSearchTerm } from "../../contexts/SearchTermProvider";
 
 const SearchInput = () => {
+  //TODO: Make distinction between the input value, which can change with each key type, and the search term which is the input value for the search engine
+  // The input value should change on each key type, but the search term only after hitting 'enter' key to search for that specific term.
+
   const [searchTerm, setSearchTerm] = useSearchTerm();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
