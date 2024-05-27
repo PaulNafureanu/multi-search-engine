@@ -1,4 +1,5 @@
 import Footer from "./components/Footer/Footer";
+import Main from "./components/Main/Main";
 import ResultsContainer from "./components/Main/ResultsContainer";
 import NavBar from "./components/NavBar/NavBar";
 import { useDarkMode } from "./contexts/DarkModeProvider";
@@ -13,7 +14,7 @@ const App = () => {
       } dark:bg-blue-950 transition`}
     >
       <NavBar />
-      <ResultsContainer />
+      <Main />
       <Footer />
     </div>
   );
