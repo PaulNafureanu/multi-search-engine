@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSearchTerm } from "../../contexts/SearchTermProvider";
 
 const SearchInput = () => {
-  //TODO: Make distinction between the input value, which can change with each key type, and the search term which is the input value for the search engine
-  // The input value should change on each key type, but the search term only after hitting 'enter' key to search for that specific term.
-
   const [searchTerm, setSearchTerm] = useSearchTerm();
+  const [inputSearch, setInputSearch] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSearchTerm(inputSearch);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
+    setInputSearch(e.target.value);
   };
 
   return (
@@ -24,7 +23,7 @@ const SearchInput = () => {
           </label>
           <div className="transition flex w-fit h-fit items-center rounded-full">
             <input
-              value={searchTerm}
+              value={inputSearch}
               onChange={handleInputChange}
               className=" transition border rounded-l-full px-8 py-4 w-96 text-gray-700 text-bold leading-tight outline-none"
               placeholder="I am looking for..."
